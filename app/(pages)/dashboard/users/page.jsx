@@ -3,6 +3,7 @@ import styles from "@/app/components/dashboard/users/users.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+import { fetchUsers } from "@/app/server-actions/data";
 
 
 
@@ -10,48 +11,13 @@ import Link from "next/link";
 
 
 
-const users = [
-    {
-        Name : 'test',
-        Email : 'test',
-        Role : 'test',
-        Status : 'test',
-        Action : 'test',
-    },
-    {
-        Name : 'test',
-        Email : 'test',
-        Role : 'test',
-        Status : 'test',
-        Action : 'test',
-    },
-    {
-        Name : 'test',
-        Email : 'test',
-        Role : 'test',
-        Status : 'test',
-        Action : 'test',
-    },
-    {
-        Name : 'test',
-        Email : 'test',
-        Role : 'test',
-        Status : 'test',
-        Action : 'test',
-    },
-    {
-        Name : 'test',
-        Email : 'test',
-        Role : 'test',
-        Status : 'test',
-        Action : 'test',
-    },
-]
 
 
 
 
-const UsersPage = () => {
+const UsersPage =  async () => {
+
+    let users = await fetchUsers();
 
 
     return (
