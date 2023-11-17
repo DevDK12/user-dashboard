@@ -1,11 +1,8 @@
 import { User } from "@/app/mongodb/models";
 import { connectToDB } from "@/app/mongodb/connect";
+import {ITEM_PER_PAGE} from "@/app/constants";
 
 
-
-
-
-const ITEM_PER_PAGE = 6;
 
 
 export const fetchUsers = async (q, page) => {

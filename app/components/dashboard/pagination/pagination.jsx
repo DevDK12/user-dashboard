@@ -2,11 +2,7 @@
 
 import styles from "./pagination.module.css";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-
-
-
-const ITEM_PER_PAGE = 6;
-
+import {ITEM_PER_PAGE} from "@/app/constants";
 
 
 const Pagination = ({ count }) => {
