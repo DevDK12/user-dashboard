@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { fetchUsers } from "@/app/server-actions/data";
+import { deleteUser } from "@/app/server-actions/actions";
 
 
 
@@ -65,7 +66,7 @@ const UsersPage =  async () => {
                                             View
                                         </button>
                                     </Link>
-                                    <form >
+                                    <form action={deleteUser}>
                                         <input type="hidden" name="id" value={(user.id)} />
                                         <button className={`${styles.button} ${styles.delete}`}>
                                             Delete
