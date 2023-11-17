@@ -38,7 +38,7 @@ MONGO=<mongodb uri>
 
 4. Build optimal version of project and run :
 ```bash
-npm build
+npm run build
 npm start
 ```
 
