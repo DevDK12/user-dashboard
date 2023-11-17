@@ -2,6 +2,8 @@
 
 This is repository for User dashboard project 
 
+Here's the [Live Project](https://user-dashboard-chi.vercel.app/dashboard) deployed on Vercel
+
 ![Alt text](./public/image.png)
 
 ![Alt text](./public/image-1.png)
