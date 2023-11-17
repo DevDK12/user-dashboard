@@ -2,6 +2,7 @@ import Search from "@/app/components/dashboard/search/search";
 import styles from "@/app/components/dashboard/users/users.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import Pagination from "@/app/components/dashboard/pagination/pagination"
 
 import { fetchUsers } from "@/app/server-actions/data";
 import { deleteUser } from "@/app/server-actions/actions";
@@ -16,9 +17,11 @@ import { deleteUser } from "@/app/server-actions/actions";
 
 
 
-const UsersPage =  async () => {
+const UsersPage =  async ({ searchParams }) => {
 
-    let users = await fetchUsers();
+    const q = searchParams?.q || "";
+    const page = searchParams?.page || 1;
+    const {count, users } = await fetchUsers(q, page);
 
 
     return (
@@ -78,6 +81,7 @@ const UsersPage =  async () => {
                     ))}
                 </tbody>
             </table>
+            <Pagination count={count} />
         </div>
     );
 };
