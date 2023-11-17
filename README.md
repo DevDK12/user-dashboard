@@ -24,7 +24,7 @@ git clone https://github.com/DevDK12/user-dashboard.git
 npm i
 ```
 
-1. Create `.env` file in root directory of project (outside of any folder side by side of `package.json` file)
+3. Create `.env` file in root directory of project (outside of any folder side by side of `package.json` file)
    - Replace `<mongodb uri>` with your unique mongodb url 
    - Follow next section to generate url
 
