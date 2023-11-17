@@ -1,3 +1,4 @@
+import { updateUser } from "@/app/server-actions/actions";
 import { fetchUser } from "@/app/server-actions/data";
 import styles from "@/app/components/dashboard/users/singleUser/singleUser.module.css";
 import Image from "next/image";
@@ -20,7 +21,7 @@ const SingleUserPage = async ({ params }) => {
             </div>
             
             <div className={styles.formContainer}>
-                <form  className={styles.form}>
+                <form action={updateUser}  className={styles.form}>
                     <input type="hidden" name="id" value={user.id} />
 
                     <label>Username</label>
@@ -40,14 +41,14 @@ const SingleUserPage = async ({ params }) => {
                     
                     <label>Is Admin?</label>
                     <select name="isAdmin" id="isAdmin">
-                        <option value={true} selected={user.isAdmin}>Yes</option>
-                        <option value={false} selected={!user.isAdmin}>No</option>
+                        <option value={true} defaultValue={user.isAdmin}>Yes</option>
+                        <option value={false} defaultValue={!user.isAdmin}>No</option>
                     </select>
 
                     <label>Is Active?</label>
                     <select name="isActive" id="isActive">
-                        <option value={true} selected={user.isActive}>Yes</option>
-                        <option value={false} selected={!user.isActive}>No</option>
+                        <option value={true} defaultValue={user.isActive}>Yes</option>
+                        <option value={false} defaultValue={!user.isActive}>No</option>
                     </select>
                     
                     <button>Update</button>
