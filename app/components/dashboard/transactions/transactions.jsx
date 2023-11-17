@@ -3,6 +3,20 @@ import styles from "./transactions.module.css";
 
 
 
+/**
+ * Transaction Component
+ * 
+ * This component is responsible for rendering a transaction.
+ * 
+ * It includes:
+ * - A TransactionDetails component, which displays the details of the transaction.
+ * 
+ * The layout of these components is controlled by CSS modules, with styles imported from 'transaction.module.css'.
+ * 
+ * @returns A JSX element representing a transaction.
+ */
+
+
 const Transactions = () => {
 
 

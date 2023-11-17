@@ -1,9 +1,33 @@
-import { updateUser } from "@/app/server-actions/actions";
-import { fetchUser } from "@/app/server-actions/data";
-import styles from "@/app/components/dashboard/users/singleUser/singleUser.module.css";
-import Image from "next/image";
+// Importing necessary components and functions for the SingleUserPage
+import { updateUser } from "@/app/server-actions/actions"; // updateUser function for updating user data
+import { fetchUser } from "@/app/server-actions/data"; // fetchUser function for fetching user data from the server
+import styles from "@/app/components/dashboard/users/singleUser/singleUser.module.css"; // CSS module for styling the SingleUserPage
+import Image from "next/image"; // Image component from Next.js for displaying images
 
 
+
+
+/**
+ * SingleUserPage Component
+ * 
+ * This component is responsible for rendering a page that displays the details of a single user and allows for updating these details.
+ * 
+ * It includes:
+ * - An Image component, which displays the user's avatar.
+ * - A form with fields for username, email, and password. The form uses the updateUser function, which  performs NEXTJS server action and sends the form data to the server to update the user's details.
+ * 
+ * The layout of these components is controlled by CSS modules, with styles imported from 'singleUser.module.css'.
+ * 
+ * 
+ * 
+ * @param {Object} params The parameters passed to the SingleUserPage component. It expects an 'id' parameter for the ID of the user to be displayed.
+ * 
+ * @variables : 
+ * - id : fetches id from route params
+ * - user : fetches user by id via server-action fetchUser() 
+ * 
+ * @returns A JSX element representing the single user page.
+ */
 
 const SingleUserPage = async ({ params }) => {
 
